@@ -1,0 +1,140 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hare Bear PT</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    {% block head_js %} {% endblock head_js %}
+
+    <!-- Font Awesome Javascript CDN -->
+    <script
+      src="https://kit.fontawesome.com/2ea8c5e5d2.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap Javascript CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}" />
+  </head>
+  <body>
+    <header class="v-header v-container">
+      <!-- Navigation Bar -->
+      <nav class="navbar navbar-expand-lg fixed-top main-navbar">
+        <a class="navbar-brand" href="{% url 'index' %}">Hare Bear PT</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="mainNav-burger"><i class="fas fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav m-auto">
+            <a class="nav-item nav-link main-nav-item" href="{% url 'index' %}"
+              >Home</a
+            >
+            <a class="nav-item nav-link main-nav-item" href="#">About</a>
+            <a
+              class="nav-item nav-link main-nav-item"
+              href="{% url 'grouptraining_view'%}"
+              >Group Training</a
+            >
+            <a class="nav-item nav-link main-nav-item" href="#">Packages</a>
+            <a
+              class="nav-item nav-link main-nav-item"
+              href="{% url 'contact_view' %}"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </nav>
+
+      <!-- Backgroun video in the header -->
+      <div class="fullscreen-video-wrap">
+        <video
+          class="video-insert"
+          src="{% static 'images/intro_Long.mp4' %}"
+          autoplay
+          muted
+          loop="true"
+        ></video>
+      </div>
+      <div class="header-overlay"></div>
+      <div class="header-content">
+        <h1>Hare Bare PT</h1>
+        <p>
+          Are you ready to achieve your fitness goals?
+        </p>
+        <a href="" class="btn btn-outline-success">Read More</a>
+      </div>
+    </header>
+
+    {% block content %} {% endblock %}
+
+    <footer>
+      <div class="row center">
+        <div class="footer-col col-8 offset-2 col-md-4 offset-md-0">
+          <h4>Terms and Agrement</h4>
+          <p class="p-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum itaque
+            deserunt quos ducimus ratione aperiam officiis illum. Quae, dicta?
+            Aspernatur?
+          </p>
+        </div>
+        <div class="footer-col col-8 offset-2 col-md-4 offset-md-0">
+          <h4>Social Media</h4>
+          <p class="p-text">
+            Visit my social media to stay updated!
+          </p>
+          <a class="social-media-link fb-clr" href="#"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a class="social-media-link insta-clr" href="#"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+        <div class="footer-col col-8 offset-2 col-md-4 offset-md-0">
+          <h4>Contact</h4>
+          <p class="p-text">
+            Want to get in touch? You can contact me via email or fill out this
+            form
+            <span class="link"
+              ><a href="{% url 'contact_view' %}">here!</a></span
+            >
+          </p>
+          <p class="h5">| hearbearpt@gmail.com |</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
