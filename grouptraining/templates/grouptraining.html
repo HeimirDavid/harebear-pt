@@ -1,34 +1,33 @@
 {% extends 'base.html' %} {% load static %} {% block head_js %}
+
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <script
   src="https://maps.googleapis.com/maps/api/js?key={{key}}&callback=initMap&libraries=&v=weekly"
   defer
 ></script>
-<script src="{% static 'js/maps.js' %}"></script>
-{% endblock %} {% block content %}
 
+<!-- Jquery CDN -->
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
+  integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
+  crossorigin="anonymous"
+></script>
+
+<script src="{% static 'js/maps.js' %}"></script>
+
+{% endblock %} {% block content %}
+<h2>Group training!</h2>
 <div class="container">
-  <h2>Group training!</h2>
   {% for event in events %}
   <p>{{event.name}}</p>
   <p>{{event.description}}</p>
   <p>{{event.price}}</p>
   <p>{{event.address}}</p>
-
-  <div id="map"></div>
+  <p class="lat">{{event.geolocation.lat}}</p>
+  <p class="lon">{{event.geolocation.lon}}</p>
+  <input class="lat" type="hidden" value="{{event.geolocation.lat}}" />
+  <input class="lon" type="hidden" value="{{event.geolocation.lon}}" />
+  <div class="map" id="{{event.pk}}"></div>
+  {% endfor %}
 </div>
-
-<script>
-  let map;
-  var position = { lat: {{event.geolocation.lat}}, lng: {{event.geolocation.lon}} };
-
-  function initMap() {
-    map = new google.maps.Map(document.getElementById("map"), {
-      center: position,
-      zoom: 13,
-    });
-    var marker = new google.maps.Marker({position: position, map: map});
-  }
-</script>
-
-{% endfor %} {% endblock %}
+{% endblock %}

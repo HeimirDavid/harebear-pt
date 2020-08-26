@@ -169,7 +169,10 @@ a:hover {
 }
 
 /*-----  Group Training Section  ------*/
-#map {
+.map,
+#map0,
+#map1,
+#map2 {
   height: 300px;
   width: 300px;
 }
