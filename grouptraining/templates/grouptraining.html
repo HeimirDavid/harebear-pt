@@ -19,6 +19,7 @@
 <h2>Group training!</h2>
 <div class="container">
   {% for event in events %}
+  <img src="/static/images/{{event.image}}" alt="image" />
   <p>{{event.name}}</p>
   <p>{{event.description}}</p>
   <p>{{event.price}}</p>
