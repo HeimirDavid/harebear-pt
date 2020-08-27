@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
 
 /*-----  General Styles  ------*/
 * {
@@ -175,6 +175,23 @@ a:hover {
 #map2 {
   height: 300px;
   width: 300px;
+}
+
+.event-row {
+}
+
+.event-header {
+  text-shadow: 2px 2px 2px #4b4b4b;
+  font-size: 2.8em;
+  font-weight: 700;
+  padding-top: 1em;
+  background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.e-subheader {
+  font-size: 1.4em;
+  font-weight: 300;
+  letter-spacing: 2px;
 }
 
 /*-----  Footer Section  ------*/

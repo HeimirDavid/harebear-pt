@@ -16,19 +16,32 @@
 <script src="{% static 'js/maps.js' %}"></script>
 
 {% endblock %} {% block content %}
-<h2>Group training!</h2>
-<div class="container">
+
+<div class="event-container">
   {% for event in events %}
-  <img src="/static/images/{{event.image}}" alt="image" />
-  <p>{{event.name}}</p>
-  <p>{{event.description}}</p>
-  <p>{{event.price}}</p>
-  <p>{{event.address}}</p>
-  <p class="lat">{{event.geolocation.lat}}</p>
-  <p class="lon">{{event.geolocation.lon}}</p>
-  <input class="lat" type="hidden" value="{{event.geolocation.lat}}" />
-  <input class="lon" type="hidden" value="{{event.geolocation.lon}}" />
-  <div class="map" id="{{event.pk}}"></div>
+  <div
+    style="background:#6f8193 url(/static/images/{{event.image}});
+          background-size: cover;
+          background-blend-mode: multiply;
+          z-index: -15;"
+    class="row event-row"
+  >
+    <div class="col">
+      <h3 class="center event-header uppercase">{{event.name}}</h3>
+      {% if event.subheader %}
+      <h5 class="e-subheader center uppercase">{{event.subheader}}</h5>
+      {% endif %}
+      <div class="col-10 offset-1">
+        <p>{{event.description}}</p>
+        <p>{{event.date}}</p>
+        <p>{{event.price}}</p>
+        <p>{{event.address}}</p>
+        <div class="map" id="{{event.pk}}"></div>
+      </div>
+      <input class="lat" type="hidden" value="{{event.geolocation.lat}}" />
+      <input class="lon" type="hidden" value="{{event.geolocation.lon}}" />
+    </div>
+  </div>
   {% endfor %}
 </div>
 {% endblock %}
