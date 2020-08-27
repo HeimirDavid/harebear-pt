@@ -313,3 +313,12 @@ footer {
     padding-bottom: 20vh;
   }
 }
+
+@media (max-width: 600px) {
+  div.row.event-row.bg-clr-1 {
+    background: red !important;
+  }
+  div.row.event-row.bg-clr-2 {
+    background: blue !important;
+  }
+}

@@ -24,7 +24,7 @@
           background-size: cover;
           background-blend-mode: multiply;
           z-index: -15;"
-    class="row event-row"
+    class="row event-row {% if forloop.counter0|divisibleby:2 %} bg-clr-1 {% else %} bg-clr-2 {% endif %}"
   >
     <div class="col">
       <h3 class="center event-header uppercase">{{event.name}}</h3>
