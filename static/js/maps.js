@@ -17,19 +17,17 @@ function initMap() {
       latitude.push(valueFloat);
     });
 
-    //get all the maps and sort them in a array based on their ID
+    //get all the maps and sort them in an array based on their ID
     $(".map").each(function () {
       mapID = $(this).attr("id");
       maps.push(mapID);
     });
 
     for (i = 0; i < maps.length; i++) {
-      console.log(maps[i]);
       position = { lat: latitude[i], lng: longitude[i] };
-
       map = new google.maps.Map(document.getElementById(maps[i]), {
         center: position,
-        zoom: 8,
+        zoom: 12,
       });
       var marker = new google.maps.Marker({ position: position, map: map });
     }
