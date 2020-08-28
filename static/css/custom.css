@@ -61,6 +61,14 @@ a:hover {
   padding-bottom: 1.2em;
 }
 
+.margin-1 {
+  margin: 1em;
+}
+
+.btn {
+  border-radius: 0;
+}
+
 /*-----  Images  ------*/
 
 .logo-img {
@@ -342,9 +350,9 @@ footer {
     text-align: center;
   }
   div.row.event-row.bg-clr-1 {
-    background: #101820ff !important;
+    background: #202124 !important;
   }
   div.row.event-row.bg-clr-2 {
-    background: #367183 !important;
+    background: #2e4951 !important;
   }
 }

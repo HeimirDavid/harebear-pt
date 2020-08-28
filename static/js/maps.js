@@ -5,6 +5,7 @@ function initMap() {
     var longitude = new Array();
     var maps = new Array();
 
+    // Styles for the google maps, from snazzy maps. Theme assassin's Creed, by Sarah Frisk
     var styledMapType = new google.maps.StyledMapType([
       {
         featureType: "all",
