@@ -42,7 +42,7 @@ a:hover {
 }
 
 .p-text {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.2rem;
   letter-spacing: 1px;
   color: #e2e1e1;
@@ -55,6 +55,10 @@ a:hover {
 
 .link:hover {
   color: #a1cfa1;
+}
+
+.padd-btm {
+  padding-bottom: 1.2em;
 }
 
 /*-----  Images  ------*/
@@ -109,7 +113,7 @@ a:hover {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 .header-overlay {
@@ -129,7 +133,7 @@ a:hover {
 }
 
 .header-content h1 {
-  font-size: 40px;
+  font-size: 3em;
   margin-bottom: 0;
 }
 
@@ -173,8 +177,8 @@ a:hover {
 #map0,
 #map1,
 #map2 {
-  height: 300px;
-  width: 300px;
+  height: 250px;
+  width: 250px;
 }
 
 .event-row {
@@ -192,6 +196,15 @@ a:hover {
   font-size: 1.4em;
   font-weight: 300;
   letter-spacing: 2px;
+  color: #dbdbdb;
+}
+
+.e-subheader2 {
+  font-size: 1.6em;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #ffe895;
+  text-shadow: 1px 1px 1px rgba(150, 150, 150, 0.5);
 }
 
 /*-----  Footer Section  ------*/
@@ -225,6 +238,12 @@ footer {
   font-size: 2rem;
   padding: 0 0.5rem;
   transition: 0.3s;
+}
+
+/*-----  colours  ------*/
+
+.clr-white {
+  color: #fefefe;
 }
 
 /*-----  Media Queries  ------*/
@@ -315,10 +334,17 @@ footer {
 }
 
 @media (max-width: 600px) {
+  .event-header {
+    background-image: none;
+  }
+
+  .event-row {
+    text-align: center;
+  }
   div.row.event-row.bg-clr-1 {
-    background: red !important;
+    background: #101820ff !important;
   }
   div.row.event-row.bg-clr-2 {
-    background: blue !important;
+    background: #367183 !important;
   }
 }

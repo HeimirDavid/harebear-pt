@@ -32,11 +32,27 @@
       <h5 class="e-subheader center uppercase">{{event.subheader}}</h5>
       {% endif %}
       <div class="col-10 offset-1">
-        <p>{{event.description}}</p>
-        <p>{{event.date}}</p>
-        <p>{{event.price}}</p>
-        <p>{{event.address}}</p>
-        <div class="map" id="{{event.pk}}"></div>
+        <p class="p-text clr-white center">{{event.description}}</p>
+        <div class="row center">
+          <div class="col-12 col-md-6">
+            <h5 class="e-subheader2 uppercase">when?</h5>
+            <p class="p-text clr-white">{{event.date}}</p>
+            <p class="p-text clr-white">
+              The price is <span class="highlight">{{event.price}} kr</span> per
+              session.
+            </p>
+          </div>
+
+          <div class="col-12 col-md-6 padd-btm">
+            <h5 class="e-subheader2 uppercase">Where?</h5>
+            <p class="p-text clr-white">
+              The event is at <span class="highlight">{{event.address}}</span>.
+            </p>
+            <div class="center">
+              <div class="map m-auto" id="{{event.pk}}"></div>
+            </div>
+          </div>
+        </div>
       </div>
       <input class="lat" type="hidden" value="{{event.geolocation.lat}}" />
       <input class="lon" type="hidden" value="{{event.geolocation.lon}}" />
