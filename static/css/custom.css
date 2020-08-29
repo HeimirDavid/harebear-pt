@@ -161,6 +161,11 @@ a:hover {
 .navbar {
   background-color: rgba(46, 49, 49, 0.4);
   height: 80px;
+  transition: 0.35s;
+}
+
+.navbar.open {
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .navbar-brand {
@@ -178,6 +183,84 @@ a:hover {
 .navbar-brand:hover,
 .nav-item:hover {
   color: #b1b1b1;
+}
+
+/* navbar collapse section */
+
+.navbar-toggler {
+  position: absolute;
+  right: 0;
+  padding: 0;
+}
+
+.navbar-collapse.collapse,
+.navbar-collapse.collapsing {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+#navIconWrapper {
+  position: relative;
+  cursor: pointer;
+  right: 1em;
+  top: 0;
+}
+
+.nav-item.nav-link.main-nav-item.openNavbar {
+  width: 50%;
+  position: relative;
+  margin-left: 50%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.navbar-nav.m-auto.add-margin {
+  margin-top: 72px !important;
+}
+
+.circle {
+  width: 2.5em;
+  height: 2.5em;
+  position: relative;
+  margin: 1em;
+  margin-top: 0.9em;
+}
+
+.line {
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #e2e1e1;
+  transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.35s;
+}
+
+.top {
+  top: 18%;
+}
+
+.middle {
+  top: 48%;
+}
+
+.bottom {
+  top: 78%;
+}
+
+.navIcon.close .top {
+  transform: rotate(45deg);
+  top: 48%;
+}
+
+.navIcon.close .middle,
+.navIcon.close .bottom {
+  transform: rotate(-45deg);
+  top: 48%;
 }
 
 /*-----  Group Training Section  ------*/

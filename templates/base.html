@@ -40,26 +40,39 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- Jquery CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
+      integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
+      crossorigin="anonymous"
+    ></script>
+
     <link rel="stylesheet" href="{% static 'css/custom.css' %}" />
   </head>
   <body>
     <header class="v-header v-container">
       <!-- Navigation Bar -->
       <nav class="navbar navbar-expand-lg fixed-top main-navbar">
-        <a class="navbar-brand" href="{% url 'index' %}">Hare Bear PT</a>
+        <!--<a class="navbar-brand" href="{% url 'index' %}">Hare Bear PT</a>-->
         <button
+          id="targetOpenCloseNav"
           class="navbar-toggler"
-          type="button"
           data-toggle="collapse"
           data-target="#navbarNavAltMarkup"
           aria-controls="navbarNavAltMarkup"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="mainNav-burger"><i class="fas fa-bars"></i></span>
+          <div id="navIconWrapper">
+            <div class="circle navIcon">
+              <span class="line top"></span>
+              <span class="line middle"></span>
+              <span class="line bottom"></span>
+            </div>
+          </div>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav m-auto">
+          <div id="navItemContainer" class="navbar-nav m-auto">
             <a class="nav-item nav-link main-nav-item" href="{% url 'index' %}"
               >Home</a
             >
@@ -114,7 +127,7 @@
     <footer>
       <div class="row center">
         <div class="footer-col col-8 offset-2 col-md-4 offset-md-0">
-          <h4>Terms and Agrement</h4>
+          <h4>Terms and Conditions</h4>
           <p class="p-text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum itaque
             deserunt quos ducimus ratione aperiam officiis illum. Quae, dicta?
@@ -146,5 +159,6 @@
         </div>
       </div>
     </footer>
+    <script src="{% static 'js/main.js' %}"></script>
   </body>
 </html>
