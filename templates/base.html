@@ -52,8 +52,11 @@
   <body>
     <header class="v-header v-container">
       <!-- Navigation Bar -->
-      <nav class="navbar navbar-expand-lg fixed-top main-navbar">
-        <!--<a class="navbar-brand" href="{% url 'index' %}">Hare Bear PT</a>-->
+      <nav
+        id="mainNavbar"
+        class="navbar navbar-expand-lg fixed-top main-navbar"
+      >
+        <a class="navbar-brand" href="{% url 'index' %}">Hare Bear PT</a>
         <button
           id="targetOpenCloseNav"
           class="navbar-toggler"
@@ -96,7 +99,7 @@
       <div class="fullscreen-video-wrap">
         <video
           class="video-insert"
-          src="{% static 'images/intro_Long.mp4' %}"
+          src="{% static 'images/intro_Long_notext.mp4' %}"
           autoplay
           muted
           loop="true"
