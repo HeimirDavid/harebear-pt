@@ -343,6 +343,26 @@ a:hover {
   text-shadow: 1px 1px 1px rgba(150, 150, 150, 0.5);
 }
 
+/*-----  Contact Section  ------*/
+
+.contact-h {
+  margin: 2em 1em;
+  font-size: 1.8em;
+}
+
+.contact-background {
+  background: #6f8193 url("/static/images/contact.jpg");
+  background-size: cover;
+  background-blend-mode: multiply;
+  z-index: -15;
+  padding-bottom: 5em;
+}
+
+.form-control {
+  border-radius: 0;
+  background-color: #dedede;
+}
+
 /*-----  Footer Section  ------*/
 
 footer {

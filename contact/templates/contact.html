@@ -10,68 +10,71 @@
   })();
 </script>
 <!-- Alerts displaying message to the user -->
-<div
-  id="success_alert"
-  class="alert alert-success alert-dismissible fade"
-  role="alert"
->
-  <strong>Your email has been sent!</strong>
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
-<div
-  id="failed_alert"
-  class="alert alert-warning alert-dismissible fade"
-  role="alert"
->
-  <strong>We were unable to send an email at this time.</strong>
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
-
-<!-- contact form sending email with email.js -->
-<div class="container center">
-  <h2 class="h2">Want to get in touch? Send me an email here!</h2>
-  <form onsubmit="return sendMail(this);">
-    <div class="form-row">
-      <div class="col">
-        <input
-          type="text"
-          name="full_name"
-          id="full_name"
-          class="form-control"
-          placeholder="Full Name"
-          required
-        />
-      </div>
-    </div>
-    <br />
-    <input
-      type="email"
-      name="email_address"
-      class="form-control"
-      id="email_address"
-      placeholder="Your Email Address"
-      required
-    />
-    <br />
-    <textarea
-      class="form-control"
-      name="message"
-      id="message"
-      rows="5"
-      placeholder="Message"
-      required
-    ></textarea>
-    <br />
-
-    <button type="submit" class="btn btn-primary">
-      Send <i class="fas fa-paper-plane"></i>
+<div class="contact-background">
+  <div
+    id="success_alert"
+    class="alert alert-success alert-dismissible fade"
+    role="alert"
+  >
+    <strong>Your email has been sent!</strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
     </button>
-  </form>
-  <br />
+  </div>
+  <div
+    id="failed_alert"
+    class="alert alert-warning alert-dismissible fade"
+    role="alert"
+  >
+    <strong>We were unable to send an email at this time.</strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <!-- contact form sending email with email.js -->
+  <div class="container center">
+    <h2 class="h2 e-subheader2 contact-h">
+      Want to get in touch? Send me an email here!
+    </h2>
+    <form onsubmit="return sendMail(this);">
+      <div class="form-row">
+        <div class="col">
+          <input
+            type="text"
+            name="full_name"
+            id="full_name"
+            class="form-control"
+            placeholder="Full Name"
+            required
+          />
+        </div>
+      </div>
+      <br />
+      <input
+        type="email"
+        name="email_address"
+        class="form-control"
+        id="email_address"
+        placeholder="Your Email Address"
+        required
+      />
+      <br />
+      <textarea
+        class="form-control"
+        name="message"
+        id="message"
+        rows="5"
+        placeholder="Message"
+        required
+      ></textarea>
+      <br />
+
+      <button type="submit" class="btn btn-primary">
+        Send <i class="fas fa-paper-plane"></i>
+      </button>
+    </form>
+  </div>
 </div>
 
 <script type="text/Javascript" src="{% static 'js/sendEmailJS.js' %}"></script>
