@@ -9,6 +9,7 @@ $(document).ready(function () {
     $(".navbar").toggleClass("open");
   });
 
+  // Intersection Observers to change the background color of the navbar when scrolled beyond the intro video
   const navbar = document.querySelector("#mainNavbar");
   const sectionOne = document.querySelector(".fullscreen-video-wrap");
 

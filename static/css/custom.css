@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
 
 /*-----  General Styles  ------*/
+
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -189,6 +194,11 @@ a:hover {
   background-color: rgba(0, 0, 0, 0.9);
 }
 
+.nav-item.dropdown.openNavbar {
+  padding-right: 0;
+  padding-left: 0;
+}
+
 /* navbar collapse section */
 
 .navbar-toggler {
@@ -265,6 +275,37 @@ a:hover {
 .navIcon.close .bottom {
   transform: rotate(-45deg);
   top: 48%;
+}
+
+/* navbar dropdown grouptraining section */
+
+.dropdown-menu.show,
+.dropdown-item {
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: 0.3s;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.dropdown-menu {
+  padding: 0;
+  right: 0;
+}
+
+.dropdown-item {
+  color: #fff;
+  padding: 0.7em;
+}
+
+.dropdown-item:hover {
+  color: #b1b1b1;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.openNavbar .dropdown-menu.show {
+  width: 50%;
+  float: right;
 }
 
 /*-----  Group Training Section  ------*/

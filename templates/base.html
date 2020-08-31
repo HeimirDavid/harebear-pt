@@ -80,18 +80,41 @@
               >Home</a
             >
             <a class="nav-item nav-link main-nav-item" href="#">About</a>
-            <a
-              class="nav-item nav-link main-nav-item"
-              href="{% url 'grouptraining_view'%}"
-              >Group Training</a
-            >
+            {% if categories %}
+            <li class="nav-item dropdown">
+              <a
+                class="nav-item nav-link main-nav-item dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >Group Training
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                {% for category in tc %}
+                <a class="dropdown-item" href="{% url 'category_view' category.pk %}#c">{{ category.name }}</a>
+                {% endfor %}
+                <a class="dropdown-item" href="{% url 'grouptraining_view'%}#c">All Events</a>
+              </div>
+            </li>
+            {% else %}
+              <a
+                class="nav-item nav-link main-nav-item"
+                href="{% url 'grouptraining_view'%}#c"
+                >Group Training</a
+              >
+            {% endif %}
+           
             <a class="nav-item nav-link main-nav-item" href="#">Packages</a>
             <a
               class="nav-item nav-link main-nav-item"
-              href="{% url 'contact_view' %}"
+              href="{% url 'contact_view' %}#c"
               >Contact</a
             >
-          </div>
+            
+          
         </div>
       </nav>
 
@@ -124,8 +147,14 @@
         </div>
       </div>
     </div>
-
+    {% if categories %}
+    <p>Here it is! {{categories}}</p>
+    {% else %}
+    <p>No luck here... {{categories}}</p>
+    {% endif %}
+    <div id="c"> <!--c for content -->
     {% block content %} {% endblock %}
+    </div>
 
     <footer>
       <div class="row center">
