@@ -1,1 +1,1 @@
-web: gunicorn ptsite.wsgi:application
+web: gunicorn ptsite.wsgi:application --log-file -
