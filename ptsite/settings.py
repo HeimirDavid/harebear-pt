@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'home',
     'contact',
     'grouptraining',
+    'one_on_one',
 ]
 
 MIDDLEWARE = [

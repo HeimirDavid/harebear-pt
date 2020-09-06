@@ -29,6 +29,7 @@ urlpatterns = [
     path('', index, name="index"),
     path('contact/', include('contact.urls')),
     path('grouptraining/', include('grouptraining.urls')),
+    path('one_on_one/', include('one_on_one.urls')),
     #url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT }),
 ]#+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

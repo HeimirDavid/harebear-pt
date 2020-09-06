@@ -7,6 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hare Bear PT</title>
 
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="static/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="static/images/favicon/site.webmanifest">
+
     <!-- Bootstrap CSS CDN -->
     <link
       rel="stylesheet"
@@ -110,7 +116,7 @@
               >
             {% endif %}
            
-            <a class="nav-item nav-link main-nav-item" href="#">Packages</a>
+            <a class="nav-item nav-link main-nav-item" href="{% url 'oneOnOne_view' %}#c">One on One</a>
             <a
               class="nav-item nav-link main-nav-item"
               href="{% url 'contact_view' %}#c"
@@ -157,15 +163,7 @@
 
     <footer>
       <div class="row center">
-        <div class="footer-col col-8 offset-2 col-md-4 offset-md-0">
-          <h4>Terms and Conditions</h4>
-          <p class="p-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum itaque
-            deserunt quos ducimus ratione aperiam officiis illum. Quae, dicta?
-            Aspernatur?
-          </p>
-        </div>
-        <div class="footer-col col-8 offset-2 col-md-4 offset-md-0">
+        <div class="footer-col col-10 offset-1 col-lg-4 offset-lg-0">
           <h4>Social Media</h4>
           <p class="p-text m-0">
             Visit my social media to stay updated!
@@ -184,8 +182,21 @@
             data-hide-cover="false"
             data-show-facepile="false">
           </div>
+
         </div>
-        <div class="footer-col col-8 offset-2 col-md-4 offset-md-0">
+        <div class="footer-col col-lg-4 offset-lg-0">
+          <a href="{% url 'index'%}">
+          <div class="footer-img">
+          <img
+            class="logo-img"
+            src="{% static 'images/logo.png' %}"
+            alt="logo"
+          />
+          <p class="h5 copyright">&copy; 2020 HareBearPT.com<p>
+        </div>
+          </a>
+        </div>
+        <div class="footer-col col-10 offset-1 col-lg-4 offset-lg-0">
           <h4>Contact</h4>
           <p class="p-text">
             Want to get in touch? You can contact me via email or fill out this

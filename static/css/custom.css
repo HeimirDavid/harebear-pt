@@ -395,6 +395,25 @@ footer {
   padding: 0 0.5rem;
   transition: 0.3s;
 }
+.footer-img .logo-img {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translate(-50%, -60%);
+  height: 6em;
+  transition: 0.3s;
+}
+
+.h5.copyright {
+  position: absolute;
+  bottom: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.footer-img .logo-img:hover {
+  opacity: 0.7;
+}
 
 /*-----  colours  ------*/
 
