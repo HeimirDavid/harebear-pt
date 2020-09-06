@@ -20,26 +20,32 @@
     class="row event-row {% if forloop.counter0|divisibleby:2 %} bg-clr-1 {% else %} bg-clr-2 {% endif %}"
   >
     <div class="col">
-      <h3 class="center event-header uppercase">{{event.name}}</h3>
-      {% if event.subheader %}
-      <h5 class="e-subheader center uppercase">{{event.subheader}}</h5>
-      {% endif %}
-      <div class="col-10 offset-1">
+      <div
+        class="col-10 offset-1 {% if forloop.counter0|divisibleby:2 %} event-info {% else %} event-info-2 {% endif %}"
+      >
+        <div class="e-headers">
+          <h3 class="center event-header uppercase">{{event.name}}</h3>
+          {% if event.subheader %}
+          <h5 class="e-subheader center uppercase">{{event.subheader}}</h5>
+          {% endif %}
+        </div>
+
         <p class="p-text clr-white center">{{event.description}}</p>
         <div class="row center">
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-6 p-4">
             <h5 class="e-subheader2 uppercase">when?</h5>
             <p class="p-text clr-white">{{event.date}}</p>
             <p class="p-text clr-white">
-              The price is <span class="highlight">{{event.price}} kr</span> per
-              session.
+              The price is
+              <span class="highlight">{{event.price}} kr</span> per session.
             </p>
           </div>
 
-          <div class="col-12 col-md-6 padd-btm">
+          <div class="col-12 col-md-6 padd-btm p-4">
             <h5 class="e-subheader2 uppercase">Where?</h5>
             <p class="p-text clr-white">
-              The event is at <span class="highlight">{{event.address}}</span>.
+              The event is at
+              <span class="highlight">{{event.address}}</span>.
             </p>
             <div class="center">
               <div class="map m-auto" id="{{event.pk}}"></div>
@@ -51,6 +57,7 @@
       <input class="lon" type="hidden" value="{{event.geolocation.lon}}" />
     </div>
   </div>
+
   {% endfor %}
 </div>
 {% endblock %}
