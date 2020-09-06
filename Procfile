@@ -1,0 +1,1 @@
+web: gunicorn ptsite.wsgi:application
