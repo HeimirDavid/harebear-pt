@@ -158,6 +158,23 @@
     </div>
 
     <div id="c"> <!--c for content -->
+      {% if device.is_xsmall or device.is_small %}
+            <div class="col-sm">
+                {# Rendered for x-small/small screen devices #}
+                <p>Here is for mobile!</p>
+            </div>
+        {% elif device.is_medium %}
+            <div class="col-md">
+                {# Rendered for medium screen devices #}
+                <p>Here is for medium!</p>
+            </div>
+        {% else %}
+            <div class="col-lg">
+                {# Rendered for large/xlarge screen devices #}
+                Here is for large!
+            </div>
+        {% endif %}
+
     {% block content %} {% endblock %}
     </div>
 
