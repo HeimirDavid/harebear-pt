@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'responsive',
     'django_google_maps',
     'home',
     'contact',
@@ -66,17 +65,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'ptsite.urls'
-
-#new for django-responsive2
-TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.core.context_processors.request',
-    'responsive.context_processors.device',
-)
-
-#new for django-responsive2
-MIDDLEWARE_CLASSES = (
-    'responsive.middleware.ResponsiveMiddleware',
-)
 
 TEMPLATES = [
     {
@@ -150,8 +138,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 django_heroku.settings(locals())
 
 MEDIA_URL = '/images/'
