@@ -70,6 +70,10 @@ a:hover {
   margin: 1em;
 }
 
+.mr-30px {
+  margin-right: 30px;
+}
+
 .btn {
   border-radius: 0;
 }
