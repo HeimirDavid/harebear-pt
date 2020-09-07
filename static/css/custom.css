@@ -78,6 +78,10 @@ a:hover {
   border-radius: 0;
 }
 
+.bg-clr-footer {
+  background-color: #1b1a1a;
+}
+
 /*-----  Images  ------*/
 
 .logo-img {
@@ -530,6 +534,15 @@ footer {
 @media (max-width: 600px) {
   .header-content {
     margin-bottom: 10rem;
+  }
+
+  .v-header.v-container {
+    padding: 32vh 0;
+    background: #564351 url("/static/images/header-mobile.jpg");
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: #fefefe;
+    z-index: -15;
   }
 }
 

@@ -23,6 +23,9 @@
 
     {% block head_js %} {% endblock head_js %}
 
+    <!-- Instagram feed, javascript source 
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script> -->
+
     <!-- Facebook embeded page source -->
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/sv_SE/sdk.js#xfbml=1&version=v8.0" nonce="07Xmv95K"></script>
 
@@ -129,13 +132,15 @@
 
       <!-- Backgroun video in the header -->
       <div class="fullscreen-video-wrap">
+
+        <!--
         <video
           class="video-insert"
           src="{% static 'images/intro_Long_notext.mp4' %}"
           autoplay
           muted
           loop="true"
-        ></video>
+        ></video>-->
       </div>
       <div class="header-overlay"></div>
       <div class="header-content">
@@ -161,8 +166,12 @@
 
     {% block content %} {% endblock %}
     </div>
-
+    
+    
     <footer>
+      <!--
+      <div class="elfsight-app-8fc4f8ba-fbcb-4821-a285-cc408fc3bec8"></div>
+      -->
       <div class="row center">
         <div class="footer-col col-10 offset-1 col-lg-4 offset-lg-0">
           <h4>Social Media</h4>

@@ -51,9 +51,6 @@ function initMap() {
         elementType: "geometry.fill",
         stylers: [
           {
-            color: "#000000",
-          },
-          {
             lightness: 20,
           },
         ],
@@ -70,6 +67,42 @@ function initMap() {
           },
           {
             weight: 1.2,
+          },
+        ],
+      },
+      {
+        featureType: "administrative.province",
+        elementType: "labels.text.fill",
+        stylers: [
+          {
+            color: "#e3b141",
+          },
+        ],
+      },
+      {
+        featureType: "administrative.locality",
+        elementType: "labels.text.fill",
+        stylers: [
+          {
+            color: "#e0a64b",
+          },
+        ],
+      },
+      {
+        featureType: "administrative.locality",
+        elementType: "labels.text.stroke",
+        stylers: [
+          {
+            color: "#0e0d0a",
+          },
+        ],
+      },
+      {
+        featureType: "administrative.neighborhood",
+        elementType: "labels.text.fill",
+        stylers: [
+          {
+            color: "#d1b995",
           },
         ],
       },
@@ -98,14 +131,29 @@ function initMap() {
         ],
       },
       {
+        featureType: "road",
+        elementType: "labels.text.stroke",
+        stylers: [
+          {
+            color: "#12120f",
+          },
+        ],
+      },
+      {
         featureType: "road.highway",
         elementType: "geometry.fill",
         stylers: [
           {
-            color: "#000000",
+            lightness: "-77",
           },
           {
-            lightness: 17,
+            gamma: "4.48",
+          },
+          {
+            saturation: "24",
+          },
+          {
+            weight: "0.65",
           },
         ],
       },
@@ -113,9 +161,6 @@ function initMap() {
         featureType: "road.highway",
         elementType: "geometry.stroke",
         stylers: [
-          {
-            color: "#000000",
-          },
           {
             lightness: 29,
           },
@@ -125,14 +170,41 @@ function initMap() {
         ],
       },
       {
+        featureType: "road.highway.controlled_access",
+        elementType: "geometry.fill",
+        stylers: [
+          {
+            color: "#f6b044",
+          },
+        ],
+      },
+      {
         featureType: "road.arterial",
         elementType: "geometry",
         stylers: [
           {
-            color: "#000000",
+            color: "#4f4e49",
           },
           {
-            lightness: 18,
+            weight: "0.36",
+          },
+        ],
+      },
+      {
+        featureType: "road.arterial",
+        elementType: "labels.text.fill",
+        stylers: [
+          {
+            color: "#c4ac87",
+          },
+        ],
+      },
+      {
+        featureType: "road.arterial",
+        elementType: "labels.text.stroke",
+        stylers: [
+          {
+            color: "#262307",
           },
         ],
       },
@@ -141,10 +213,22 @@ function initMap() {
         elementType: "geometry",
         stylers: [
           {
-            color: "#000000",
+            color: "#a4875a",
           },
           {
             lightness: 16,
+          },
+          {
+            weight: "0.16",
+          },
+        ],
+      },
+      {
+        featureType: "road.local",
+        elementType: "labels.text.fill",
+        stylers: [
+          {
+            color: "#deb483",
           },
         ],
       },
@@ -165,10 +249,25 @@ function initMap() {
         elementType: "geometry",
         stylers: [
           {
-            color: "#000000",
+            color: "#0f252e",
           },
           {
             lightness: 17,
+          },
+        ],
+      },
+      {
+        featureType: "water",
+        elementType: "geometry.fill",
+        stylers: [
+          {
+            color: "#080808",
+          },
+          {
+            gamma: "3.14",
+          },
+          {
+            weight: "1.07",
           },
         ],
       },
