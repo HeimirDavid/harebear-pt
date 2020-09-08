@@ -245,9 +245,9 @@ a:hover {
 }
 
 .nav-item.nav-link.main-nav-item.openNavbar {
-  width: 50%;
+  width: 60%;
   position: relative;
-  margin-left: 50%;
+  margin-left: 42%;
   background-color: rgba(0, 0, 0, 0.9);
 }
 
