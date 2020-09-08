@@ -20,7 +20,7 @@ class Grouptraining(models.Model):
     price = models.IntegerField()
     address = map_fields.AddressField(max_length=200)
     geolocation = map_fields.GeoLocationField(max_length=100)
-    category = models.ForeignKey(GroupCategory, null=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey(GroupCategory, blank=True, null=True, on_delete=models.SET_NULL)
     image = models.ImageField(blank=True, null=True)
     upload_date = models.DateTimeField(blank=True, null=True, default=timezone.now)
 
