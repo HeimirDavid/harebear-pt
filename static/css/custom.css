@@ -536,13 +536,13 @@ footer {
     margin-bottom: 10rem;
   }
 
-  .v-header.v-container {
-    padding: 32vh 0;
-    background: #564351 url("/static/images/header-mobile.jpg");
-    background-size: cover;
-    background-blend-mode: multiply;
-    color: #fefefe;
-    z-index: -15;
+  .uppercase.e-subheader.margin-1 {
+    display: block;
+  }
+
+  .event-info,
+  .event-info-2 {
+    padding: 1em;
   }
 }
 
@@ -579,6 +579,19 @@ footer {
     bottom: 0%;
     left: 0;
     transform: none;
+  }
+
+  .v-header.v-container {
+    padding: 32vh 0;
+    background: #564351 url("/static/images/header-mobile.jpg");
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: #fefefe;
+    z-index: -15;
+  }
+
+  .video-insert {
+    display: none;
   }
 }
 

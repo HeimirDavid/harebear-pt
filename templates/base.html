@@ -88,9 +88,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div id="navItemContainer" class="navbar-nav m-auto">
-            <a class="nav-item nav-link main-nav-item" href="{% url 'index' %}"
-              >Home</a
+            <a class="nav-item nav-link main-nav-item" href="{% url 'index' %}#c"
+              >About</a
             >
+            <a class="nav-item nav-link main-nav-item" href="{% url 'oneOnOne_view' %}#c">One on One</a>
             
             {% if categories %}
             <li class="nav-item dropdown">
@@ -118,8 +119,7 @@
                 >Group Training</a
               >
             {% endif %}
-           
-            <a class="nav-item nav-link main-nav-item" href="{% url 'oneOnOne_view' %}#c">One on One</a>
+          
             <a
               class="nav-item nav-link main-nav-item"
               href="{% url 'contact_view' %}#c"
@@ -132,15 +132,15 @@
 
       <!-- Backgroun video in the header -->
       <div class="fullscreen-video-wrap">
-
-        <!--
+        
+        
         <video
           class="video-insert"
           src="{% static 'images/intro_Long_notext.mp4' %}"
           autoplay
           muted
           loop="true"
-        ></video>-->
+        ></video>
       </div>
       <div class="header-overlay"></div>
       <div class="header-content">

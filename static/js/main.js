@@ -9,6 +9,15 @@ $(document).ready(function () {
     $(".navbar").toggleClass("open");
   });
 
+  //Close the hamburger menu by clicking anywhere on the page
+  $(document).click(function (event) {
+    var click = $(event.target);
+    var _open = $(".navbar-collapse").hasClass("show");
+    if (_open === true && !click.hasClass("navbar-toggler")) {
+      $(".navbar-toggler").click();
+    }
+  });
+
   // Intersection Observers to change the background color of the navbar when scrolled beyond the intro video
   const navbar = document.querySelector("#mainNavbar");
   const sectionOne = document.querySelector(".fullscreen-video-wrap");
