@@ -1,6 +1,10 @@
 $(document).ready(function () {
   /*****    Section for navbar    *****/
 
+  if ($(window).width() <= 991) {
+    $("#header-bg-video").remove();
+  }
+
   //toggle the menu to open and close
   $("#targetOpenCloseNav").click(function () {
     $(".navIcon").toggleClass("close");
@@ -22,8 +26,8 @@ $(document).ready(function () {
   // http://jsfiddle.net/sLaapxff/1/
   // https://stackoverflow.com/questions/33175833/shortening-long-blocks-of-text-based-on-words-not-characters-to-display-a-read-m
 
-  function collapseText(x) {
-    if (x.matches) {
+  function collapseText(mobileX) {
+    if (mobileX.matches) {
       $("#about_text").each(function () {
         var text = $(this).text();
         var word = "";
@@ -79,9 +83,9 @@ $(document).ready(function () {
       });
     }
   }
-  var x = window.matchMedia("(max-width: 600px)");
+  var mobileX = window.matchMedia("(max-width: 600px)");
   collapseText(x);
-  x.addListener(collapseText);
+  mobileX.addListener(collapseText);
 
   // Intersection Observers to change the background color of the navbar when scrolled beyond the intro video
   const navbar = document.querySelector("#mainNavbar");
