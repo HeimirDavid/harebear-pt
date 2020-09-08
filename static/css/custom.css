@@ -2,8 +2,10 @@
 
 /*-----  General Styles  ------*/
 
-html {
+html,
+body {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 * {
@@ -17,7 +19,6 @@ body {
   line-height: 1.5;
   background-color: #060606;
   color: #fefefe;
-  overflow-x: hidden;
 }
 
 a,
@@ -619,6 +620,7 @@ footer {
   .contact-card {
     background: #171a1d;
     height: 100%;
+    padding: 3em 0.5em;
   }
 
   .c-form-h {

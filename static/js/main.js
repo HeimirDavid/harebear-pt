@@ -84,7 +84,7 @@ $(document).ready(function () {
     }
   }
   var mobileX = window.matchMedia("(max-width: 600px)");
-  collapseText(x);
+  collapseText(mobileX);
   mobileX.addListener(collapseText);
 
   // Intersection Observers to change the background color of the navbar when scrolled beyond the intro video
