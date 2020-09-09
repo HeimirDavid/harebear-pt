@@ -58,7 +58,7 @@ $(document).ready(function () {
             '<span class="more_text" style="display:none;"> ' +
             text.substring(index, text.length) +
             "</span>" +
-            '<a href="#" class="read_more">...<br/><span class="btn about-tx-btn">Read More <i class="fas fa-caret-down"></i></span></a>';
+            '<a href="#" class="read_more">...<br/><span class="glow about-tx-btn">Read More <i class="fas fa-caret-down"></i></span></a>';
 
           $(this).html(html);
 
@@ -69,12 +69,12 @@ $(document).ready(function () {
               event.preventDefault();
               if ($(this).hasClass("less")) {
                 $(this).html(
-                  "<br/><span class='btn about-tx-btn'>Read Less <i class='fas fa-caret-up'></i></span>"
+                  "<br/><span class='glow about-tx-btn'>Read Less <i class='fas fa-caret-up'></i></span>"
                 );
                 $(this).parent().find(".more_text").show();
               } else {
                 $(this).html(
-                  "...<br/><span class='btn about-tx-btn'>Read More <i class='fas fa-caret-down'></i></span>"
+                  "...<br/><span class='glow about-tx-btn'>Read More <i class='fas fa-caret-down'></i></span>"
                 );
                 $(this).parent().find(".more_text").hide();
               }
