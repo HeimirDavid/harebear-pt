@@ -619,6 +619,10 @@ footer {
     color: #fefefe;
     z-index: -15;
   }
+
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
 }
 
 @media (max-width: 767px) {
