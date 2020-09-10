@@ -13,16 +13,20 @@
 <div class="event-container">
   {% for event in events %}
   <div
-    style="background:#6f8193 url(/static/images/{{event.image}});
-          background-size: cover;
-          background-blend-mode: multiply;
-          z-index: -15;"
+    style="
+      background: #6f8193
+        url('{{MEDIA_URL}}{{event.image}}');
+      background-size: cover;
+      background-blend-mode: multiply;
+      z-index: -15;
+    "
     class="row event-row {% if forloop.counter0|divisibleby:2 %} bg-clr-1 {% else %} bg-clr-2 {% endif %}"
   >
     <div class="col">
       <div
         class="col-10 offset-1 {% if forloop.counter0|divisibleby:2 %} event-info {% else %} event-info-2 {% endif %}"
       >
+        <p></p>
         <div class="e-headers">
           <h3 class="center event-header uppercase">{{event.name}}</h3>
           {% if event.subheader %}

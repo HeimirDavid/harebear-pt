@@ -11,10 +11,10 @@
     <meta name="keywords" content="HAREBEARPT, Hare Bear PT, PT, Personal Trainer, Personlig Tränare, Uppsala, Gruppträning, Grouptraining, Free weights, Calisthenics, Fitness"/>
     
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/static/images/favicon/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicon/apple-touch-icon.png'%}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon/favicon-32x32.png'%}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon/favicon-16x16.png'%}">
+    <link rel="manifest" href="{% static 'images/favicon/site.webmanifest'%}">
 
     <!-- Bootstrap CSS CDN -->
     <link
@@ -77,7 +77,7 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 {% for category in tc %}
-                <a class="dropdown-item" href="{% url 'category_view' category.pk %}#c">{{ category.name }}</a>
+                <a class="dropdown-item" href="{% url 'category_view' category.slug %}#c">{{ category.name }}</a>
                 {% endfor %}
                 <a class="dropdown-item" href="{% url 'grouptraining_view'%}#c">All Events</a>
               </div>

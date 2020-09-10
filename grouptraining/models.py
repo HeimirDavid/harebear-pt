@@ -7,7 +7,11 @@ class GroupCategory(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField()
     upload_date = models.DateTimeField(blank=True, null=True, default=timezone.now)
+    slug = models.SlugField(unique=True)
 
+    class Meta:
+        unique_together = (['name', 'slug'])
+        
     def __str__(self):
         return self.name
 
@@ -21,7 +25,7 @@ class Grouptraining(models.Model):
     address = map_fields.AddressField(max_length=200)
     geolocation = map_fields.GeoLocationField(max_length=100)
     category = models.ForeignKey(GroupCategory, blank=True, null=True, on_delete=models.SET_NULL)
-    image = models.ImageField(blank=True, null=True)
+    image = models.ImageField(upload_to="images", blank=True, null=True)
     upload_date = models.DateTimeField(blank=True, null=True, default=timezone.now)
 
     def __str__(self):
