@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'contact',
     'grouptraining',
     'one_on_one',
+    'tawkto',
 ]
 
 MIDDLEWARE = [
@@ -179,6 +180,11 @@ DEFAULT_FILE_STORAGE = 'ptsite.custom_storages.MediaStorage'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
+
+
+TAWKTO_ID_SITE = '5f5aac024704467e89edf65a'
+TAWKTO_API_KEY = '1641f362b6f232c41aac0c710922621e0138313f'
+TAWKTO_IS_SECURE = True
 
 
 
