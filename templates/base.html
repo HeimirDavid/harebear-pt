@@ -95,6 +95,11 @@
               href="{% url 'contact_view' %}#c"
               >Contact</a
             >
+            <a
+            class="nav-item nav-link main-nav-item"
+            href="{% url 'add_event' %}#c"
+            >Add event</a
+          >
             
           
         </div>
@@ -105,13 +110,16 @@
         
         
         <video
+        autoplay
+          muted
+          playsinline
+          loop
           id="header-bg-video"
           class="video-insert"
           src="{% static 'images/intro_Long_notext.mp4' %}"
-          autoplay
-          muted
-          loop="true"
-        ></video>
+          
+        >
+      </video>
       </div>
       <div class="header-overlay"></div>
       <div class="header-content">
