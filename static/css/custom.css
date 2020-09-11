@@ -574,6 +574,15 @@ footer {
   .event-info-2 {
     padding: 1em;
   }
+
+  .v-header.v-container {
+    padding: 32vh 0;
+    background: #564351 url("/static/images/header-mobile.jpg");
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: #fefefe;
+    z-index: -15;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -609,15 +618,6 @@ footer {
     bottom: 0%;
     left: 0;
     transform: none;
-  }
-
-  .v-header.v-container {
-    padding: 32vh 0;
-    background: #564351 url("/static/images/header-mobile.jpg");
-    background-size: cover;
-    background-blend-mode: multiply;
-    color: #fefefe;
-    z-index: -15;
   }
 
   .navbar {

@@ -1,7 +1,7 @@
 $(document).ready(function () {
   /*****    Section for navbar    *****/
 
-  if ($(window).width() <= 991) {
+  if ($(window).width() <= 600) {
     $("#header-bg-video").remove();
   }
 

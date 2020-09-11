@@ -9,7 +9,6 @@
 <script src="{% static 'js/maps.js' %}"></script>
 
 {% endblock %} {% block content %}
-
 <div class="event-container">
   {% for event in events %}
   <div
@@ -40,8 +39,9 @@
             <h5 class="e-subheader2 uppercase">when?</h5>
             <p class="p-text clr-white">{{event.date}}</p>
             <p class="p-text clr-white">
-              The price is
-              <span class="highlight">{{event.price}} kr</span> per session.
+              Cost:
+              <span class="highlight">{{event.price}} SEK</span> per person.
+              First time is FREE!
             </p>
           </div>
 
