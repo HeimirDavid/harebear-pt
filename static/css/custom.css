@@ -574,18 +574,9 @@ footer {
   .event-info-2 {
     padding: 1em;
   }
-
-  .v-header.v-container {
-    padding: 32vh 0;
-    background: #564351 url("/static/images/header-mobile.jpg");
-    background-size: cover;
-    background-blend-mode: multiply;
-    color: #fefefe;
-    z-index: -15;
-  }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   /*-----  Video header  ------*/
   .v-container {
     padding-right: 3rem;
@@ -602,6 +593,15 @@ footer {
   .contact-form {
     transform: translate(10%, -50%);
     width: 19em;
+  }
+
+  .v-header.v-container {
+    padding: 32vh 0;
+    background: #564351 url("/static/images/header-mobile.jpg");
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: #fefefe;
+    z-index: -15;
   }
 }
 

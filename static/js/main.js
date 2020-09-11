@@ -1,10 +1,8 @@
 $(document).ready(function () {
   /*****    Section for navbar    *****/
 
-  if ($(window).width() <= 600) {
+  if ($(window).width() <= 1024) {
     $("#header-bg-video").remove();
-  } else {
-    $("#header-bg-video").get(0).play();
   }
 
   //toggle the menu to open and close
