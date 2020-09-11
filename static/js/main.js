@@ -3,6 +3,8 @@ $(document).ready(function () {
 
   if ($(window).width() <= 600) {
     $("#header-bg-video").remove();
+  } else {
+    $("#header-bg-video").play();
   }
 
   //toggle the menu to open and close
