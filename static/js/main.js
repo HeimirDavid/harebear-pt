@@ -4,7 +4,7 @@ $(document).ready(function () {
   if ($(window).width() <= 600) {
     $("#header-bg-video").remove();
   } else {
-    $("#header-bg-video").play();
+    $("#header-bg-video").get(0).play();
   }
 
   //toggle the menu to open and close

@@ -14,7 +14,6 @@ def grouptraining_view(request):
                 ()).order_by('-upload_date')
     context = {'events': events,
                 'key': GOOGLE_MAPS_API_KEY,
-                'static_url': STATIC_URL,
                 'categories': categories,
                 'tc': training_categories,
               }
