@@ -57,7 +57,6 @@ INSTALLED_APPS = [
     'contact',
     'grouptraining',
     'one_on_one',
-    'tawkto',
 ]
 
 MIDDLEWARE = [
