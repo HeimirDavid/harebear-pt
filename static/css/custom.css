@@ -164,7 +164,7 @@ a:hover {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  opacity: 0.8;
+  opacity: 0.65;
 }
 
 .header-overlay {
@@ -696,7 +696,7 @@ footer {
 
   #about {
     padding: 10vh 0; /* 29vh 0 10vh 0 with image shadow */
-    background: #4b4b4b url("/static/images/about.jpg");
+    background: #4b4b4b url("/static/images/about-text-2.jpg");
     background-size: cover;
     background-blend-mode: multiply;
     color: #fefefe;
@@ -718,6 +718,17 @@ footer {
 
   .about-section {
     padding-bottom: 20vh;
+  }
+}
+
+@media (min-width: 2560px) {
+  #about {
+    padding: 10vh 0; /* 29vh 0 10vh 0 with image shadow */
+    background: #4b4b4b url("/static/images/about.jpg");
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: #fefefe;
+    z-index: -1;
   }
 }
 
